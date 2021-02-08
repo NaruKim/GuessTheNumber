@@ -13,10 +13,10 @@ if difficulty=='easy':
 else:
   attempt=5
 
-print(f"You have {attempt} attempts")
 print(the_number)
 
 while attempt>0 and answer==False:
+  print(f"You have {attempt} attempts")
   user=int(input("You guess: "))
   if user==the_number:
     answer=True
@@ -25,8 +25,6 @@ while attempt>0 and answer==False:
   else:
     print("Too low")
   attempt-=1
-  if answer==False:
-    print(f"You have {attempt} attempts")
 
 if answer==True:
   print(f"The answer is {the_number}. You win")
